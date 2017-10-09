@@ -23,3 +23,14 @@ docker-compose up
 Access Wireshark via
 
     https://<hostname>:14500/?username=wireshark=password=wireshark
+
+The application can be stopped with
+
+```bash
+docker-compose down
+```
+
+To stop the application and delete the docker containers use
+```bash
+docker-compose down -v
+```
