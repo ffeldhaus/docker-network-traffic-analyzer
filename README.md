@@ -24,6 +24,10 @@ Access Wireshark via
 
     https://<hostname>:14500/?username=wireshark=password=wireshark
 
+If you want to share access to your Wireshark session use
+
+    https://<hostname>:14500/?username=wireshark=password=wireshark&sharing=true
+
 The application can be stopped with
 
 ```bash
