@@ -1,3 +1,8 @@
+defaults
+    timeout connect 5s
+    timeout client 50s
+    timeout server 50s
+
 #frontend http-to-https
 #    mode http
 #    bind *:80
