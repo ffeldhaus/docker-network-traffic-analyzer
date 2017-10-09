@@ -1,6 +1,17 @@
-version: '3'
+version: '2'
 services:
+  proxy:
+    image: haproxy:1.7.9
+    container_name: proxy
+    ports:
+    # - 80:80
+    # - 445:445
+    # - 2049:2049
+    - 14500:14500 # required to access wireshark, change first port if necessary
+    volumes:
+      - ./haproxy-http.cfg:/usr/local/etc/haproxy/haproxy.cfg:Z
   wireshark:
     image: "ffeldhaus/wireshark:0.1"
-    ports:
-     - "14500:14500"
+    container_name: wireshark
+    privileged: true
+    network_mode: "service:proxy"
