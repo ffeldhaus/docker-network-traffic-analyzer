@@ -1,0 +1,6 @@
+version: '3'
+services:
+  wireshark:
+    image: "ffeldhaus/wireshark:0.1"
+    ports:
+     - "14500:14500"
