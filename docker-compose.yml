@@ -12,7 +12,7 @@ services:
     volumes:
       - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:Z
   wireshark:
-    image: "ffeldhaus/wireshark:0.2"
+    image: "ffeldhaus/wireshark:0.3"
     container_name: wireshark
     restart: always
     privileged: true
